@@ -48,9 +48,9 @@ const Navbar = () => {
 
   
 
-  <a href="#" className="hover:text-[#c5a96e] transition-colors">Premium Exports</a>
+  <a href="/home" className="hover:text-[#c5a96e] transition-colors">Home</a>
   <a href="#" className="hover:text-[#c5a96e] transition-colors">Why Choose Us</a>
-  <a href="#" className="hover:text-[#c5a96e] transition-colors">About Us</a>
+  <a href="/aboutUs" className="hover:text-[#c5a96e] transition-colors">About Us</a>
   <a href="#" className="hover:text-[#c5a96e] transition-colors">Contact</a>
 </div>
 
