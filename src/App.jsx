@@ -7,7 +7,9 @@ import './App.css'
 import Home from './pages/Home'
 import Navbar from './pages/Navbar'
 import AboutUs from './pages/AboutUs'
+import WhyChooseUs from './pages/WhyChooseUs'
 import Footer from './pages/Footer'
+import Products from './pages/Products'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -18,6 +20,8 @@ function App() {
       <Routes>
         <Route path="/home" element={<Home/>} />
         <Route path="/aboutUs" element={<AboutUs/>} />
+        <Route path="/why" element={<WhyChooseUs/>} />
+        <Route path="/products" element={<Products/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>
