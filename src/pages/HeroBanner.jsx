@@ -26,7 +26,7 @@ const handleAnimationComplete = () => {
   className="w-full h-[60vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 relative bg-cover bg-center bg-no-repeat"
   style={{
     backgroundImage:
-      "url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/beb06e69-a523-48d6-88c3-5cec79efec7b.png')"
+      "url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/da35811c-a5da-49dd-9526-8d4376bebc20.png')"
   }}
 >
   {/* Background Overlay */}
