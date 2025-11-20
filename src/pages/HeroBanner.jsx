@@ -23,10 +23,10 @@ const handleAnimationComplete = () => {
 };
   return (
    <section 
-  className="w-full h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 relative bg-cover bg-center bg-no-repeat"
+  className="w-full h-[60vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 relative bg-cover bg-center bg-no-repeat"
   style={{
     backgroundImage:
-      "url('https://c7.alamy.com/comp/H511AB/singburi-thailand-18-agricultural-products-such-as-rice-beans-cucumbers-H511AB.jpg')"
+      "url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/beb06e69-a523-48d6-88c3-5cec79efec7b.png')"
   }}
 >
   {/* Background Overlay */}
@@ -49,6 +49,7 @@ const handleAnimationComplete = () => {
         cursorCharacter="|"
         cursorClassName="text-white"
       />
+      
     </div>
 
     {/* Right Section */}
@@ -65,6 +66,11 @@ const handleAnimationComplete = () => {
           transformStyles={transformStyles}
           enableHover={false}
         />
+        <div>
+            <button className="px-6 py-3 bg-red-600 text-white font-semibold rounded-full shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+             Explore more..
+            </button>
+        </div>
       </div>
     </div>
 
