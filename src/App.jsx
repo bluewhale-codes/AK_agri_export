@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs'
 import WhyChooseUs from './pages/WhyChooseUs'
 import Footer from './pages/Footer'
 import Products from './pages/Products'
+import ContactUs from './pages/ContactUs'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/aboutUs" element={<AboutUs/>} />
         <Route path="/why" element={<WhyChooseUs/>} />
         <Route path="/products" element={<Products/>} />
+        <Route path="/contact" element={<ContactUs/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>
