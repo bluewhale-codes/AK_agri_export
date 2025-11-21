@@ -80,28 +80,19 @@ const SplitText = ({
         onSplit: self => {
           assignTargets(self);
           const tween = gsap.fromTo(
-            targets,
-            { ...from },
-            {
-              ...to,
-              duration,
-              ease,
-              stagger: delay / 1000,
-              scrollTrigger: {
-                trigger: el,
-                start,
-                once: true,
-                fastScrollEnd: true,
-                anticipatePin: 0.4
-              },
-              onComplete: () => {
-                animationCompletedRef.current = true;
-                onLetterAnimationComplete?.();
-              },
-              willChange: 'transform, opacity',
-              force3D: true
-            }
-          );
+              targets,
+              { ...from },
+              {
+                ...to,
+                duration,
+                ease,
+                stagger: delay / 1000,
+                repeat: -1,        // 🔥 infinite repeat
+                repeatDelay: 0.5,  // optional delay
+                yoyo: true,        // animate forward then backward
+                force3D: true
+              }
+            );
           return tween;
         }
       });
@@ -187,7 +178,9 @@ const SplitText = ({
         );
       default:
         return (
-          <p ref={ref} style={style} className={classes}>
+          <p ref={ref} style={style} className={`${classes} text-green-900`}>
+
+
             {text}
           </p>
         );

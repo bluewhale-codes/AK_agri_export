@@ -1,7 +1,39 @@
-import { CheckCircle } from "lucide-react";
-import Masonry from "../Compo/Masonry";
+
 import CircularGallery from "../Compo/CicularGallery";
+import MangoesPage from "../Compo/MangoesPage";
+import TextType from "../Compo/Animation/TextType";
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
 export default function WhyChooseUs() {
+  const productImages = [
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702045/Screenshot_2025-11-21_104345_hqvvke.png",
+    text: "Jaggery Cube"
+  },
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702262/Screenshot_2025-11-21_104604_bfnfqa.png",
+    text: "Jaggery Powder"
+  },
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702262/Screenshot_2025-11-21_104622_b8licp.png",
+    text: "Fresh Mango"
+  },
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702261/Screenshot_2025-11-21_104657_wzmzh2.png",
+    text: "Basmati Rice"
+  },
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702259/Screenshot_2025-11-21_104713_xammxm.png",
+    text: "Wheat"
+  },
+  {
+    image: "https://res.cloudinary.com/dycjjaxsk/image/upload/v1763702261/Screenshot_2025-11-21_104638_v3a6js.png",
+    text: "Wheat"
+  }
+  
+];
+
   const features = [
     { title: "100% Natural & Fresh", desc: "We deliver farm-fresh and naturally grown products." },
     { title: "Verified Export Quality", desc: "Every product goes through strict export-grade checks." },
@@ -33,35 +65,53 @@ export default function WhyChooseUs() {
 ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className=" bg-gray-50">
+      <div 
+  className="relative max-w-full px-6 py-16 bg-cover bg-center bg-no-repeat"
+  style={{ 
+    backgroundImage: "url('https://res.cloudinary.com/dycjjaxsk/image/upload/v1763709499/generated-image_37_1_uuidki.png')"  // <-- change this
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Actual Content */}
+  <div className="relative max-w-7xl mx-auto">
         
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Why Choose Us
-          </h2>
-          <p className="text-gray-600 mt-3">
-            Delivering quality and trust across global markets.
-          </p>
-        </div>
-       
+    <div className="text-center mb-12">
+      
+      <TextType
+        className="text-4xl md:text-4xl font-bold text-white"
+        text={[
+          "Why Choose Us",
+          
+        ]}
+        typingSpeed={75}
+        pauseDuration={1500}
+        showCursor={true}
+        cursorCharacter="|"
+        cursorClassName="text-white"
+      />
+      <p className="text-gray-200 mt-3">
+        Delivering quality and trust across global markets.
+      </p>
+    </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-sm p-6 rounded-2xl border hover:shadow-md transition-all"
-            >
-              <CheckCircle className="w-8 h-8 text-green-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
-              <p className="text-gray-600 mt-2">{item.desc}</p>
-            </div>
-          ))}
-        </div>
+    <div style={{ height: '400px', position: 'relative' }}>
+      <CircularGallery  
+        items={productImages}  
+        bend={3} 
+        textColor="#ffffff" 
+        borderRadius={0.05} 
+        scrollEase={0.02}
+      />
+    </div>
+    
+  </div>
+</div>
 
-      </div>
+
+      <MangoesPage/>
     </section>
   );
 }
