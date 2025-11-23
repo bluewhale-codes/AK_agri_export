@@ -15,12 +15,12 @@ const Navbar = () => {
            'stacked' version here, or just let it sit centered.
         */}
           <img 
-            src="https://res.cloudinary.com/dycjjaxsk/image/upload/v1763652421/5lvfehvzREiLvzFZ5xCUog_1_1_tszmvq.jpg" 
+            src="https://res.cloudinary.com/dycjjaxsk/image/upload/v1763746425/generated-image_41_1_ay3mus.png" 
             alt="Ak Agriculture Export" 
             className="h-20 object-contain" 
           />
         <img 
-          src="https://res.cloudinary.com/dycjjaxsk/image/upload/v1763652421/5lvfehvzREiLvzFZ5xCUog_1_2_mmtzph.jpg" 
+          src="https://res.cloudinary.com/dycjjaxsk/image/upload/v1763746422/generated-image_41_2_fe5mbq.png" 
           alt="Ak Agriculture Export" 
           className="h-20 object-contain" 
         />
@@ -41,17 +41,18 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-10 text-[#4a4a4a] font-semibold text-lg tracking-wide">
 
   {/* Dropdown Item 1 */}
-  <div className="group relative flex items-center gap-1 cursor-pointer hover:text-[#c5a96e] transition-colors">
+  {/* <div className="group relative flex items-center gap-1 cursor-pointer hover:text-[#c5a96e] transition-colors">
     <span>Products</span>
     <ChevronDown size={16} />
-  </div>
+  </div> */}
 
   
 
   <a href="/home" className="hover:text-[#c5a96e] transition-colors">Home</a>
+  <a href="/products" className="hover:text-[#c5a96e] transition-colors">Products</a>
   <a href="/why" className="hover:text-[#c5a96e] transition-colors">Why Choose Us</a>
   <a href="/aboutUs" className="hover:text-[#c5a96e] transition-colors">About Us</a>
-  <a href="#" className="hover:text-[#c5a96e] transition-colors">Contact</a>
+  <a href="/contact" className="hover:text-[#c5a96e] transition-colors">Contact</a>
 </div>
 
           {/* Right: User Actions */}
