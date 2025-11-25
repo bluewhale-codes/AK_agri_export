@@ -2,6 +2,7 @@
 import CircularGallery from "../Compo/CicularGallery";
 import MangoesPage from "../Compo/MangoesPage";
 import TextType from "../Compo/Animation/TextType";
+import "./whychooseus.css"
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
 };
@@ -97,15 +98,19 @@ export default function WhyChooseUs() {
       </p>
     </div>
 
-    <div style={{ height: '400px', position: 'relative' }}>
-      <CircularGallery  
-        items={productImages}  
-        bend={3} 
-        textColor="#ffffff" 
-        borderRadius={0.05} 
-        scrollEase={0.02}
-      />
-    </div>
+    <div className="circluar-gallery"
+  
+  
+>
+  <CircularGallery
+    items={productImages}
+    bend={3}
+    textColor="#ffffff"
+    borderRadius={0.05}
+    scrollEase={0.02}
+  />
+</div>
+
     
   </div>
 </div>

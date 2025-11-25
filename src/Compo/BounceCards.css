@@ -22,3 +22,39 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+/* Small phones */
+@media (max-width: 480px) {
+  .card .image,
+  .card img {
+    width: 120px;
+   
+    border-radius: 12px;
+  }
+  .card{
+    width: 120px;
+  }
+
+  /* globally scale stack in a bit */
+  .bounceCardsContainer {
+    transform: scale(0.7);
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .card .image,
+  .card img {
+    width: 150px;
+    
+  }
+  .card{
+    width: 150px;
+  }
+
+  .bounceCardsContainer {
+    transform: scale(0.85);
+  }
+}
+

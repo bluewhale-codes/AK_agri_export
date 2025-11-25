@@ -1,0 +1,11 @@
+.circluar-gallery {
+  height: 400px; /* default: large screens */
+  position: relative;
+}
+
+/* Small screens: height 200px */
+@media (max-width: 640px) {
+  .circluar-gallery {
+    height: 200px;
+  }
+}

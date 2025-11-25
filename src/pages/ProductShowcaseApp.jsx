@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowLeft, Leaf, Globe, Box, CheckCircle, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { ArrowLeft, Leaf, Globe, Box, CheckCircle, ChevronRight } from "lucide-react";
 
-// --- Sample Data (Agro Export Context) ---
 const SAMPLE_PRODUCTS  = [
   // 1. Jaggery Cube
   {
@@ -120,41 +119,40 @@ const SAMPLE_PRODUCTS  = [
   }
 ];
 
-// --- Component 1: The Product Card ---
+// Card
 const ProductCard = ({ product, onClick }) => {
   return (
-    <div 
-      className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col h-full transform hover:-translate-y-1"
+    <div
+      className="group bg-white rounded-lg sm:rounded-xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col h-full transform hover:-translate-y-1"
       onClick={() => onClick(product)}
     >
-      {/* Image Container */}
-      <div className="relative h-64 overflow-hidden bg-gray-100">
-        <img 
-          src={product.image} 
-          alt={product.name} 
+      {/* Image */}
+      <div className="relative h-40 xs:h-44 sm:h-52 md:h-60 lg:h-64 overflow-hidden bg-gray-100">
+        <img
+          src={product.image}
+          alt={product.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold tracking-wider text-[#3e2b26] rounded-full shadow-sm">
+        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/90 backdrop-blur-sm px-2 sm:px-2.5 py-0.5 sm:py-1 text-[9px] xs:text-[10px] sm:text-xs font-bold tracking-wider text-[#3e2b26] rounded-full shadow-sm">
           {product.category}
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#cba156] transition-colors">
+      <div className="p-3 xs:p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
+        <div className="flex justify-between items-start mb-1 xs:mb-1.5 sm:mb-2">
+          <h3 className="text-base xs:text-[17px] sm:text-lg md:text-xl font-serif font-bold text-gray-900 group-hover:text-[#cba156] transition-colors leading-snug">
             {product.name}
           </h3>
         </div>
-        
-        <p className="text-gray-600 text-sm mb-6 line-clamp-2 flex-grow">
+
+        <p className="text-[11px] xs:text-[12px] sm:text-sm md:text-[15px] text-gray-600 mb-3 xs:mb-4 sm:mb-5 md:mb-6 line-clamp-2 flex-grow leading-snug md:leading-normal">
           {product.shortDesc}
         </p>
 
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        
-          <button className="flex items-center gap-1 text-sm font-semibold text-[#cba156] group-hover:translate-x-1 transition-transform">
-            View Details <ChevronRight size={16} />
+        <div className="flex items-center justify-between pt-2 xs:pt-3 sm:pt-4 border-t border-gray-100">
+          <button className="flex items-center gap-1 text-[11px] xs:text-xs sm:text-sm font-semibold text-[#cba156] group-hover:translate-x-1 transition-transform">
+            View Details <ChevronRight size={14} className="sm:w-4 sm:h-4" />
           </button>
         </div>
       </div>
@@ -162,51 +160,52 @@ const ProductCard = ({ product, onClick }) => {
   );
 };
 
-// --- Component 2: The Detailed View Page ---
+
+// Detail view
 const ProductDetailView = ({ product, onBack }) => {
   return (
-    <div className="animate-fade-in pb-20">
-      {/* Back Navigation */}
-      <button 
+    <div className="animate-fade-in pb-12 sm:pb-16 lg:pb-20">
+      <button
         onClick={onBack}
-        className="flex items-center gap-2 text-gray-500 hover:text-[#cba156] font-medium mb-8 transition-colors"
+        className="flex items-center gap-2 text-gray-500 hover:text-[#cba156] font-medium mb-6 sm:mb-8 text-sm sm:text-base transition-colors"
       >
-        <ArrowLeft size={20} /> Back to Products
+        <ArrowLeft size={18} className="sm:w-5 sm:h-5" /> Back to Products
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
-        {/* Left: Image Gallery */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        {/* Image */}
         <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full h-full object-cover max-h-[600px]" 
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover max-h-[360px] sm:max-h-[450px] lg:max-h-[600px]"
           />
         </div>
 
-        {/* Right: Product Info */}
-        <div className="space-y-8">
+        {/* Info */}
+        <div className="space-y-6 sm:space-y-8">
           <div>
-            <span className="text-[#cba156] font-bold tracking-wider text-sm uppercase">
+            <span className="text-[#cba156] font-bold tracking-wider text-xs sm:text-sm uppercase">
               {product.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#3e2b26] mt-2 mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#3e2b26] mt-2 mb-3 sm:mb-4">
               {product.name}
             </h1>
-            <p className="text-2xl text-gray-900 font-medium">{product.price}</p>
+            <p className="text-xl sm:text-2xl text-gray-900 font-medium">
+              {product.price}
+            </p>
           </div>
 
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
             {product.description}
           </p>
 
-          {/* Specifications Grid */}
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <h3 className="font-serif text-xl font-bold text-[#3e2b26] mb-6 border-b pb-4">
+          {/* Specs */}
+          <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 shadow-sm">
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#3e2b26] mb-4 sm:mb-6 border-b pb-3 sm:pb-4">
               Export Specifications
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 gap-x-4">
               <SpecItem icon={<Globe />} label="Origin" value={product.specs.origin} />
               <SpecItem icon={<CheckCircle />} label="Grade" value={product.specs.grade} />
               <SpecItem icon={<Box />} label="Packaging" value={product.specs.packaging} />
@@ -215,11 +214,11 @@ const ProductDetailView = ({ product, onBack }) => {
           </div>
 
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="flex-1 bg-[#3e2b26] text-white py-4 px-8 rounded-lg font-semibold hover:bg-[#2c1e1b] transition-colors shadow-lg">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <button className="flex-1 bg-[#3e2b26] text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base font-semibold hover:bg-[#2c1e1b] transition-colors shadow-lg">
               Request Quotation
             </button>
-            <button className="flex-1 border-2 border-[#3e2b26] text-[#3e2b26] py-4 px-8 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+            <button className="flex-1 border-2 border-[#3e2b26] text-[#3e2b26] py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-sm sm:text-base font-semibold hover:bg-gray-50 transition-colors">
               Download Brochure
             </button>
           </div>
@@ -229,49 +228,49 @@ const ProductDetailView = ({ product, onBack }) => {
   );
 };
 
-// Helper Component for Specs
 const SpecItem = ({ icon, label, value }) => (
   <div className="flex items-start gap-3">
-    <div className="text-[#cba156] p-1 bg-[#fff9ec] rounded-md">
-      {React.cloneElement(icon, { size: 20 })}
+    <div className="text-[#cba156] p-1.5 bg-[#fff9ec] rounded-md">
+      {React.cloneElement(icon, { size: 18 })}
     </div>
     <div>
-      <p className="text-xs text-gray-500 uppercase font-semibold tracking-wide">{label}</p>
-      <p className="text-gray-900 font-medium">{value}</p>
+      <p className="text-[11px] sm:text-xs text-gray-500 uppercase font-semibold tracking-wide">
+        {label}
+      </p>
+      <p className="text-sm sm:text-base text-gray-900 font-medium">{value}</p>
     </div>
   </div>
 );
 
-// --- Main Parent Component ---
+// Parent
 const ProductShowcaseApp = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc] py-12 px-6 md:px-12 lg:px-24">
+    <div className="min-h-screen bg-[#fcfcfc] py-10 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-10 lg:px-20">
       {selectedProduct ? (
-        // Show Details View if a product is selected
-        <ProductDetailView 
-          product={selectedProduct} 
-          onBack={() => setSelectedProduct(null)} 
+        <ProductDetailView
+          product={selectedProduct}
+          onBack={() => setSelectedProduct(null)}
         />
       ) : (
-        // Show Grid View otherwise
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#3e2b26]">
+          <div className="text-center mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#3e2b26]">
               Our Global <span className="text-[#cba156]">Exports</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover our range of premium agricultural products sourced directly from certified Indian farms for the global market.
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
+              Discover our range of premium agricultural products sourced directly
+              from certified Indian farms for the global market.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {SAMPLE_PRODUCTS.map((product) => (
-              <ProductCard 
-                key={product.id} 
-                product={product} 
-                onClick={setSelectedProduct} 
+              <ProductCard
+                key={product.id}
+                product={product}
+                onClick={setSelectedProduct}
               />
             ))}
           </div>
