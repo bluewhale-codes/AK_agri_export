@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+  
        <Navbar/>
       <Routes>
         <Route path="/home" element={<Home/>} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="/contact" element={<ContactUs/>} />
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    
     </>
   )
 }
