@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import useAnalytics from "./useAnalytics";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -12,6 +12,7 @@ import Footer from './pages/Footer'
 import Products from './pages/Products'
 import ContactUs from './pages/ContactUs'
 function App() {
+   useAnalytics();
   const [count, setCount] = useState(0)
 
   return (
