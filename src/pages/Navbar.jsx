@@ -32,12 +32,7 @@ const Navbar = () => {
               <a href="#" className="p-1 hover:text-[#f0d47a]">
                 <Instagram size={22} className="md:w-6 md:h-6" />
               </a>
-              <a href="#" className="p-1 hover:text-[#f0d47a]">
-                <Linkedin size={22} className="md:w-6 md:h-6" />
-              </a>
-              <a href="#" className="p-1 hover:text-[#f0d47a]">
-                <Facebook size={22} className="md:w-6 md:h-6" />
-              </a>
+              
               <a href="#" className="p-1 hover:text-[#f0d47a]">
                 <Youtube size={22} className="md:w-6 md:h-6" />
               </a>
@@ -59,18 +54,7 @@ const Navbar = () => {
 
           {/* Right: Actions + Mobile button */}
           <div className="flex items-center gap-3">
-            <button
-              className="hidden md:inline-flex items-center p-1 text-[#d4b45a] hover:text-[#f0d47a]"
-              aria-label="View cart"
-            >
-              <ShoppingCart size={22} />
-            </button>
-            <button
-              className="hidden md:inline-flex items-center p-1 text-[#d4b45a] hover:text-[#f0d47a]"
-              aria-label="Account"
-            >
-              <User size={22} />
-            </button>
+            
 
             {/* Mobile hamburger */}
             <button
@@ -93,8 +77,7 @@ const Navbar = () => {
           >
             <div className="flex items-center gap-4 mb-2 sm:hidden">
               <a href="#"><Instagram size={20} /></a>
-              <a href="#"><Linkedin size={20} /></a>
-              <a href="#"><Facebook size={20} /></a>
+              
               <a href="#"><Youtube size={20} /></a>
             </div>
             {navLinks.map((link) => (
@@ -107,16 +90,7 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <div className="flex items-center gap-4 pt-3 border-t border-[#d4b45a]/40 mt-2">
-              <button className="flex items-center gap-2 text-[#d4b45a] hover:text-[#f0d47a]">
-                <ShoppingCart size={18} />
-                <span className="text-sm">Cart</span>
-              </button>
-              <button className="flex items-center gap-2 text-[#d4b45a] hover:text-[#f0d47a]">
-                <User size={18} />
-                <span className="text-sm">Account</span>
-              </button>
-            </div>
+            
           </div>
         )}
       </nav>

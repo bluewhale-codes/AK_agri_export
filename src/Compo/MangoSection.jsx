@@ -1,6 +1,7 @@
 import React from "react";
 import TextType from "./Animation/TextType";
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const MangoSection = ({ Prodctdetail, idx }) => {
   return (
@@ -15,23 +16,25 @@ const MangoSection = ({ Prodctdetail, idx }) => {
           grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center
         `}
       >
-        {/* Left Content */}
-        <div
+        {/* Animated Left Content */}
+        <motion.div
           className={`
             space-y-3 sm:space-y-4
             ${Prodctdetail.reverse ? "lg:order-2" : ""}
           `}
+          initial={{ opacity: 0, y: 50 }}         // Start below and invisible
+          whileInView={{ opacity: 1, y: 0 }}      // Animate to visible, up
+          viewport={{ once: true, amount: 0.4 }}  // Animate once, 40% in view
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
             {Prodctdetail.title}
           </h1>
-
           <p>
             <span className="text-yellow-600 text-2xl sm:text-3xl font-semibold">
               {Prodctdetail.highlight}
             </span>
           </p>
-
           <div>
             <ul className="space-y-2 sm:space-y-3">
               {Prodctdetail.descriptions.map((item, i) => (
@@ -45,7 +48,7 @@ const MangoSection = ({ Prodctdetail, idx }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Image */}
         <div

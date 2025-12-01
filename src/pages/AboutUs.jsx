@@ -1,6 +1,8 @@
 import React from 'react';
 import { CheckCircle, Globe, Award, Truck, Shield, FileCheck ,Check } from 'lucide-react';
 import TextType from '../Compo/Animation/TextType';
+import { motion } from "framer-motion";
+
 import MissionVision from '../Compo/Animation/MissionVision';
 const AboutUs = () => {
   const products = [
@@ -108,7 +110,8 @@ const AboutUs = () => {
 </section>
 
 
-     {/* Who We Are Section */}
+{/* Who We Are Section */}
+
 <section className="w-full bg-[#f9f9f4] font-serif">
   <div className="max-w-6xl mx-auto my-8 sm:my-10 px-4 sm:px-6 md:px-8 py-10 sm:py-14 lg:py-20">
     <h2 className="text-green-900 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 lg:mb-12">
@@ -117,6 +120,12 @@ const AboutUs = () => {
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Text Side */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
       <div className="space-y-3 sm:space-y-4 text-[#5f5f5f]">
         <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
           Founded with a vision to deliver premium Indian agricultural products worldwide, AK Agriculture Export
@@ -133,6 +142,7 @@ const AboutUs = () => {
           in empowering farmers while delivering the finest products to our global partners.
         </p>
       </div>
+      </motion.div>
 
       {/* Image Side */}
       <div className="flex justify-center">
@@ -149,6 +159,7 @@ const AboutUs = () => {
 
 
       {/* What We Export Section */}
+
 <section
   className="relative bg-gray-50 bg-cover bg-center py-12 sm:py-16 lg:py-20"
   style={{
@@ -168,6 +179,13 @@ const AboutUs = () => {
     {/* 2 cards in a row on small screens, 3 on large */}
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
       {products.map((product, index) => (
+        <motion.div
+            className="space-y-3 sm:space-y-4 text-[#5f5f5f]"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.4 }}
+          >
         <div
           key={index}
           className="bg-white/90 backdrop-blur-md rounded-lg shadow-md p-4 sm:p-5 lg:p-6 hover:shadow-xl transition duration-300"
@@ -200,6 +218,7 @@ const AboutUs = () => {
             />
           </div>
         </div>
+        </motion.div>
       ))}
     </div>
   </div>
@@ -208,12 +227,27 @@ const AboutUs = () => {
 
       <section className="w-full bg-[#f9f9f4]">
   <div className="max-w-6xl mx-auto my-8 sm:my-10 px-4 sm:px-6 md:px-8 py-10 sm:py-14 lg:py-20">
+    <motion.div
+        className="space-y-3 sm:space-y-4 text-[#5f5f5f]"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-900 mb-6 sm:mb-8 lg:mb-12">
       Mission & Vision
     </h2>
+    </motion.div>
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Text Side */}
+      <motion.div
+        className="space-y-3 sm:space-y-4 text-[#5f5f5f]"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
       <div className="space-y-3 sm:space-y-4 text-[#5f5f5f]">
         <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
           Founded with a vision to deliver premium Indian agricultural products worldwide, AK Agriculture Export
@@ -230,6 +264,7 @@ const AboutUs = () => {
           in empowering farmers while delivering the finest products to our global partners.
         </p>
       </div>
+      </motion.div>
 
       {/* Image Side */}
       <div className="flex justify-center">
@@ -255,6 +290,13 @@ const AboutUs = () => {
             {/* Cards: 2 per row on small+, 3 on large */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10">
               {strengths.map((strength, index) => (
+                <motion.div
+                  className="space-y-3 sm:space-y-4 text-[#5f5f5f]"
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.4 }}
+                >
                 <div
                   key={index}
                   className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-2xl transition-all duration-300"
@@ -274,6 +316,7 @@ const AboutUs = () => {
                     {strength.description}
                   </p>
                 </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -282,13 +325,22 @@ const AboutUs = () => {
     
       {/* Certifications Section */}
 <section className="w-full bg-[#f9f9f4] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-10 font-serif">
+
   <div className="max-w-6xl mx-auto">
     {/* Heading */}
+    <motion.div
+                  className="space-y-3 sm:space-y-4 text-[#5f5f5f]"
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.4 }}
+                >
     <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#3d3d3d] mb-8 sm:mb-10 lg:mb-12 text-center">
       Certifications & Compliance
     </h2>
 
     {/* Card Wrapper */}
+    
     <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl border border-green-100">
       {/* Sub Text */}
       <p className="text-sm sm:text-base lg:text-lg text-[#5f5f5f] mb-6 sm:mb-8 lg:mb-10 text-center max-w-3xl mx-auto leading-relaxed">
@@ -316,6 +368,7 @@ const AboutUs = () => {
         ))}
       </div>
     </div>
+    </motion.div>
   </div>
 </section>
 
