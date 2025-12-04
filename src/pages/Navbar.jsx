@@ -6,7 +6,7 @@ const Navbar = () => {
   const toggleMobile = () => setMobileOpen((s) => !s);
 
   const navLinks = [
-    { href: '/home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/products', label: 'Products' },
     { href: '/why', label: 'Why Choose Us' },
     { href: '/aboutUs', label: 'About Us' },
@@ -74,9 +74,9 @@ const Navbar = () => {
             className="md:hidden px-4 pt-3 pb-4 space-y-3 bg-[rgb(43,65,27)] text-[#f8e7a0]"
           >
             <div className="flex items-center gap-4 mb-2 sm:hidden">
-              <a href="#"><Instagram size={20} /></a>
+              <a href="https://www.instagram.com/ak.agri.group_of_company/" target='_blank'><Instagram size={20} /></a>
               
-              <a href="#"><Youtube size={20} /></a>
+             
             </div>
             {navLinks.map((link) => (
               <a

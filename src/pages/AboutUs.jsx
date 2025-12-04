@@ -73,7 +73,7 @@ const AboutUs = () => {
 
   const certifications = [
     "FSSAI - Food Safety Standards",
-    "APEDA - Agricultural Export Authority",
+    "APEDA RCMAC - Agricultural Export Authority",
     
   ];
 
