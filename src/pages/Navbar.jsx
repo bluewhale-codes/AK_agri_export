@@ -29,13 +29,11 @@ const Navbar = () => {
               className="h-16 md:h-24 lg:h-28 object-contain"
             />
             <div className="hidden sm:flex items-center gap-3 md:gap-4">
-              <a href="#" className="p-1 hover:text-[#f0d47a]">
+              <a href="https://www.instagram.com/ak.agri.group_of_company/" target='_blank' className="p-1 hover:text-[#f0d47a]">
                 <Instagram size={22} className="md:w-6 md:h-6" />
               </a>
               
-              <a href="#" className="p-1 hover:text-[#f0d47a]">
-                <Youtube size={22} className="md:w-6 md:h-6" />
-              </a>
+              
             </div>
           </div>
 

@@ -12,7 +12,7 @@ const Prodctdetails = [
         title:"Reliable Export & Logistics Support",
         highlight:"Timely delivery.",
         descriptions:["Fast, safe, and efficient shipping","End-to-end logistics handling","Real-time shipment tracking","Experience in exporting to multiple countries"],
-        image:"https://res.cloudinary.com/dycjjaxsk/image/upload/v1763707333/Screenshot_2025-11-21_121152_gyfz7n.png",
+        image:"https://res.cloudinary.com/dycjjaxsk/image/upload/v1764874937/Screenshot_2025-12-05_003157_symz25.png",
         reverse:true
     },
     {

@@ -50,34 +50,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Support / Info */}
-        <div className="sm:text-left">
-          <h3 className="text-xs sm:text-sm md:text-base font-bold text-[#f5e3a5] mb-2 sm:mb-3 uppercase tracking-wide">
-            Information
-          </h3>
-          <ul className="space-y-1 text-[11px] sm:text-xs md:text-sm font-semibold">
-            <li>
-              <a href="/shipping" className="hover:text-[#ffe9ac] transition-colors">
-                Shipping & Logistics
-              </a>
-            </li>
-            <li>
-              <a href="/quality" className="hover:text-[#ffe9ac] transition-colors">
-                Quality & Certifications
-              </a>
-            </li>
-            <li>
-              <a href="/terms" className="hover:text-[#ffe9ac] transition-colors">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" className="hover:text-[#ffe9ac] transition-colors">
-                Privacy Policy
-              </a>
-            </li>
-          </ul>
-        </div>
+       
 
         {/* Social + Contact */}
         <div className="sm:text-left">
@@ -86,11 +59,11 @@ export default function Footer() {
           </h3>
           <ul className="space-y-1 text-[11px] sm:text-xs md:text-sm font-semibold">
             <li>
-              <a href="https://instagram.com" className="hover:text-[#ffe9ac] transition-colors">
+              <a href="https://www.instagram.com/ak.agri.group_of_company/" className="hover:text-[#ffe9ac] transition-colors">
                 Instagram
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="https://linkedin.com" className="hover:text-[#ffe9ac] transition-colors">
                 LinkedIn
               </a>
@@ -99,13 +72,13 @@ export default function Footer() {
               <a href="https://facebook.com" className="hover:text-[#ffe9ac] transition-colors">
                 Facebook
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <div className="mt-3 sm:mt-4 text-[10px] sm:text-[11px] md:text-xs font-semibold text-[#e4cfa0]/90 space-y-1">
             <p>Email: info@akagricultureexport.com</p>
-            <p>Phone: +91-XXXXXXXXXX</p>
-            <p>Location: Maharashtra, India</p>
+            <p>Phone: +91-918960000295</p>
+            <p>Location: Saharanpur, Uttar Pradesh, India</p>
           </div>
         </div>
       </div>
